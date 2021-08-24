@@ -1,0 +1,25 @@
+$size: 5rem;
+
+body {
+    background-color: lightsteelblue;
+}
+
+h1 {
+    font-size: $size;
+    color: #fff;
+
+    span {
+        font-size: 7rem;
+        color: yellow;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: darkmagenta;
+}
