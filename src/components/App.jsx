@@ -1,10 +1,13 @@
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { BrowserRouter, Route } from "react-router-dom"
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom"
 import './App.scss'
 
 // Components
 import Main from "./main/Main"
+import Card from "./card/Card"
+import Error from "./main/Error"
+
 
 const App = () => {
     const dispatch = useDispatch()
@@ -12,7 +15,12 @@ const App = () => {
     return (
         <BrowserRouter>
             <div className="container">
-                <Route path="/" component={Main} />
+                <Switch>
+                    <Route exact path="/" component={Main} />
+                    <Route path="/card/:username/:reponame" component={Card} />
+                    <Route path="/error" component={Error} />
+                    <Redirect to="/" />
+                </Switch>
             </div>
         </BrowserRouter>
     )

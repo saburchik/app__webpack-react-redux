@@ -1,16 +1,28 @@
+.alert__title {
+    font-size: 2rem;
+    color: brown;
+}
+
+.title {
+    text-align: center;
+    font-size: 5rem;
+    color: #fff;
+}
+
 .search {
     display: flex;
     justify-content: center;
+    padding: 1rem;
 }
 
 .search__input,
 .search__btn {
-    padding: 0.5rem 1rem;
     font-size: 1rem;
-    outline: none;
     color: #000;
+    outline: none;
     border: 3px solid darkblue;
     background-color: lightskyblue;
+    padding: 0.5rem 1rem;
     transition: 0.2s;
 }
 
@@ -31,11 +43,12 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 100%;
     align-items: center;
+    width: 100%;
+    padding: 3rem 1rem;
 }
 
-.fetching__el {
+.fetching__loading {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,25 +74,30 @@
 }
 
 .pages {
+    display: flex;
     padding: 3rem 0;
 
     .page,
     .current-page {
-        border: 3px solid darkblue;
-        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
         font-size: 1.5rem;
         font-weight: 400;
-        padding: 0.5rem 1rem;
-        margin-left: 1rem;
+        border: 3px solid darkblue;
+        border-radius: 100%;
         cursor: pointer;
-    }
-
-    .page:hover {
-        background-color: dodgerblue;
+        margin: 0.5rem;
     }
 
     .current-page {
         font-weight: 700;
         background-color: #fff;
+    }
+
+    .page:hover {
+        background-color: dodgerblue;
     }
 }
